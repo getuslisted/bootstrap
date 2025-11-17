@@ -39,6 +39,7 @@
   "sass": "scss/bootstrap.scss",
   "style": "dist/css/bootstrap.css",
   "scripts": {
+    "halhar:start": "node halhar-server.js",
     "start": "npm-run-all --parallel watch docs-serve",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",

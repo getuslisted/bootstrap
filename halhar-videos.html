@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HalHar Report Video Briefings | Conservative Video News Aggregator</title>
+  <meta name="description" content="HalHar Report Video Briefings curates conservative YouTube channels and faith-based broadcasters into a fast-loading video news aggregator with on-site playback." />
+  <meta name="keywords" content="conservative video news aggregator,right wing video briefings,christian media streaming,independent conservative videos" />
+  <meta name="author" content="HalHar Report" />
+  <meta name="robots" content="index, follow" />
+  <meta name="application-name" content="HalHar Report" />
+  <meta name="msapplication-TileColor" content="#252F50" />
+  <link rel="canonical" href="https://halhar.report/videos/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HalHar Report" />
+  <meta property="og:title" content="HalHar Report Video Briefings | Conservative Video News Aggregator" />
+  <meta property="og:description" content="Watch conservative video briefings, Christian media reports, and independent analysis without leaving HalHar Report's video news hub." />
+  <meta property="og:url" content="https://halhar.report/videos/" />
+  <meta property="og:image" content="https://halhar.report/HalHar-Conservative-News-Logo.webp" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="HalHar Report logo" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HalHar Report Video Briefings | Conservative Video News Aggregator" />
+  <meta name="twitter:description" content="HalHar Report Video Briefings assembles right-of-center video updates and interviews from trusted publishers and ministries." />
+  <meta name="twitter:image" content="https://halhar.report/HalHar-Conservative-News-Logo.webp" />
+  <meta name="twitter:site" content="@HalHarReport" />
+  <meta name="twitter:creator" content="@HalHarReport" />
+  <meta name="theme-color" content="#252F50" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&family=Material+Symbols+Outlined" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "HalHar Report",
+      "url": "https://halhar.report/videos/",
+      "logo": "https://halhar.report/HalHar-Conservative-News-Logo.webp",
+      "sameAs": [
+        "https://www.facebook.com/",
+        "https://x.com/",
+        "https://truthsocial.com/",
+        "https://gab.com/",
+        "https://www.linkedin.com/"
+      ],
+      "description": "HalHar Report Video Briefings aggregates conservative video journalism, Christian broadcasting, and liberty-first commentary into a single streaming dashboard.",
+      "foundingDate": "2024-01-01"
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #f1f2f5;
+      --shell: #ffffff;
+      --shell-soft: #f7f7f9;
+      --ink: #1f2438;
+      --ink-soft: #4a5068;
+      --ink-muted: #73788d;
+      --blue: #252f50;
+      --red: #bb374d;
+      --accent: #1b2136;
+      --border: rgba(37, 47, 80, 0.16);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+      --shadow-soft: 0 28px 70px -42px rgba(37, 47, 80, 0.65);
+      font-size: 16px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, rgba(37, 47, 80, 0.08), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(187, 55, 77, 0.08), transparent 45%),
+        var(--bg);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .layout {
+      width: min(1400px, 94vw);
+      margin: clamp(1.4rem, 4vw, 2.8rem) auto;
+      display: grid;
+      gap: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    main {
+      display: grid;
+      gap: clamp(1.6rem, 3vw, 2.6rem);
+    }
+
+    .layout.no-sidebar {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .masthead-stack {
+      display: grid;
+      gap: clamp(1.2rem, 3vw, 1.8rem);
+      background: var(--shell);
+      padding: clamp(1.6rem, 4vw, 2.2rem);
+      border-radius: var(--radius-lg);
+      border-left: 6px solid var(--red);
+      border-right: 6px solid var(--blue);
+      border-top: 10px solid var(--red);
+      border-bottom: 10px solid var(--blue);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .logo-card {
+      width: 100%;
+      min-height: clamp(160px, 26vw, 220px);
+      border-radius: var(--radius-md);
+      background: #e6e5e5 url('HalHar-Conservative-News-Logo.webp') center/contain no-repeat;
+    }
+
+    .primary-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    .menu-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.75rem 1.55rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--blue);
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      box-shadow: 0 10px 24px -18px rgba(37, 47, 80, 0.8);
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      border-left: 6px solid var(--red);
+    }
+
+    .menu-pill.active,
+    .menu-pill:hover,
+    .menu-pill:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px -18px rgba(37, 47, 80, 0.7);
+      outline: none;
+    }
+
+    .menu-pill a {
+      color: inherit;
+    }
+
+    .share-strip {
+      background: var(--blue);
+      border-radius: var(--radius-md);
+      padding: clamp(1rem, 3vw, 1.4rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      border-top: 10px solid var(--red);
+      border-bottom: 10px solid var(--blue);
+      border-left: 6px solid var(--red);
+    }
+
+    .share-heading {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: #ffffff;
+    }
+
+    .share-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      justify-content: center;
+    }
+
+    .share-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.65);
+      background: #ffffff;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+      text-decoration: none;
+    }
+
+    .share-link:hover,
+    .share-link:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -18px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 255, 255, 0.9);
+      outline: none;
+    }
+
+    .share-link--bookmark {
+      width: auto;
+      padding: 0 1.15rem;
+      gap: 0.55rem;
+    }
+
+    .share-link--bookmark img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .share-link--bookmark .share-text {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    .seo-intro {
+      background: var(--shell);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.6rem, 4vw, 2.2rem);
+      box-shadow: var(--shadow-soft);
+      border-top: 10px solid var(--red);
+      border-bottom: 10px solid var(--blue);
+      border-left: 6px solid var(--red);
+    }
+
+    .seo-intro h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin: 0 0 1rem 0;
+      color: var(--accent);
+    }
+
+    .seo-intro p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--ink-soft);
+    }
+
+    .page {
+      background: var(--shell);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.6rem, 4vw, 2.4rem);
+      box-shadow: var(--shadow-soft);
+      border-top: 10px solid var(--red);
+      border-bottom: 10px solid var(--blue);
+      border-left: 6px solid var(--red);
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .page-header h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      margin: 0;
+      color: var(--accent);
+    }
+
+    .dateline {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .page-description {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
+    }
+
+    .column-grid {
+      display: grid;
+      gap: clamp(1.4rem, 3vw, 2rem);
+    }
+
+    .feed-column {
+      background: var(--shell-soft);
+      border-radius: var(--radius-md);
+      padding: clamp(1.2rem, 3vw, 1.6rem);
+      display: grid;
+      gap: 1rem;
+      border-top: 10px solid var(--red);
+      border-bottom: 10px solid var(--blue);
+      border-left: 6px solid var(--red);
+    }
+
+    .feed-column h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--accent);
+    }
+
+    .column-description {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .feed-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .feed-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 47, 80, 0.1);
+      background: #ffffff;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--ink);
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .feed-button img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .feed-button.active {
+      background: var(--blue);
+      color: #ffffff;
+      box-shadow: 0 16px 28px -20px rgba(37, 47, 80, 0.6);
+    }
+
+    .feed-button--error,
+    .feed-button[aria-disabled="true"] {
+      cursor: not-allowed;
+      opacity: 0.6;
+      filter: grayscale(0.3);
+    }
+
+    .feed-output {
+      display: grid;
+      gap: 1rem;
+      min-height: 160px;
+    }
+
+    .feed-output.loading::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid rgba(37, 47, 80, 0.1);
+      border-top-color: var(--blue);
+      animation: spin 1s linear infinite;
+      justify-self: center;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .story-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(37, 47, 80, 0.12);
+    }
+
+    .story-header img {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+    }
+
+    .feed-placeholder {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+    }
+
+    .story-card {
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.2rem;
+      box-shadow: 0 18px 50px -40px rgba(0, 0, 0, 0.6);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .story-card:hover,
+    .story-card:focus-within {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 60px -36px rgba(37, 47, 80, 0.55);
+    }
+
+    .story-card h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .story-card h4 a {
+      text-decoration: none;
+    }
+
+    .story-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+    }
+
+    .story-excerpt {
+      margin-top: 0.75rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    .story-share {
+      margin-top: 0.85rem;
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .share-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(37, 47, 80, 0.08);
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .share-chip:hover,
+    .share-chip:focus-visible {
+      transform: translateY(-2px);
+      background: rgba(37, 47, 80, 0.18);
+      outline: none;
+    }
+
+    .share-chip img {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 14, 29, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 999;
+    }
+
+    .video-modal.is-open {
+      display: flex;
+    }
+    .video-modal__dialog {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 960px;
+      width: min(960px, 100%);
+      box-shadow: 0 40px 120px -60px rgba(0, 0, 0, 0.7);
+      position: relative;
+      display: grid;
+      gap: 1.2rem;
+      padding: 1.8rem;
+    }
+
+    .video-modal__close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--ink);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .video-modal__player {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: #000;
+    }
+
+    .video-modal__player iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-modal__info {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .video-modal__title {
+      margin: 0;
+      font-size: 1.35rem;
+      color: var(--accent);
+    }
+
+    .video-modal__meta {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+    }
+
+    .video-modal__shares {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .video-modal__share {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      background: rgba(37, 47, 80, 0.1);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .video-modal__share img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .site-footer {
+      margin: clamp(2rem, 4vw, 3rem) 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      padding: clamp(1.6rem, 3vw, 2.4rem);
+      background: var(--shell);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border-top: 10px solid var(--red);
+      border-bottom: 10px solid var(--blue);
+      border-left: 6px solid var(--red);
+    }
+
+    .footer-brand {
+      width: clamp(160px, 20vw, 240px);
+      height: clamp(60px, 8vw, 90px);
+      background: #e6e5e5 url('HalHar-Conservative-News-Logo.webp') center/contain no-repeat;
+      border-left: 6px solid var(--blue);
+      border-right: 6px solid var(--red);
+      border-radius: var(--radius-md);
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-menu .menu-pill {
+      background: rgba(37, 47, 80, 0.1);
+      color: var(--ink);
+    }
+
+    .footer-menu .menu-pill:hover,
+    .footer-menu .menu-pill:focus-visible {
+      background: rgba(37, 47, 80, 0.2);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    @media (max-width: 720px) {
+      .primary-menu {
+        justify-content: center;
+      }
+
+      .footer-inner {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .story-card {
+        padding: 0.85rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout no-sidebar">
+    <main>
+      <section class="masthead-stack" aria-label="HalHar navigation">
+        <div class="logo-card" role="img" aria-label="HalHar Report logo"></div>
+        <nav class="primary-menu" aria-label="Primary navigation">
+          <a class="menu-pill" href="halhar-report.html">
+            <span class="material-symbols-outlined" aria-hidden="true">view_column</span>
+            Homepage
+          </a>
+          <button class="menu-pill active" type="button">
+            <span class="material-symbols-outlined" aria-hidden="true">movie</span>
+            Video Feeds
+          </button>
+          <a class="menu-pill" href="halhar-polls.html">
+            <span class="material-symbols-outlined" aria-hidden="true">bar_chart</span>
+            Polls
+          </a>
+          <a class="menu-pill" href="halhar-report.html#social">
+            <span class="material-symbols-outlined" aria-hidden="true">share</span>
+            Social Media
+          </a>
+          <a class="menu-pill" href="mailto:hello@halhar.report?subject=Suggest%20a%20Feed">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            Suggest a Feed
+          </a>
+        </nav>
+      </section>
+
+      <section class="seo-intro">
+        <h1>HalHar Report Video Briefings Hub</h1>
+        <p>
+          HalHar Report Video Briefings is a conservative video news aggregator that blends cable network clips, independent analysis, and Christian broadcasting into one curated stream.
+          Each playlist-ready channel is cached by our proxy so viewers load the latest segments, interviews, and breaking alerts without delays.
+          Bookmark this page to watch patriot-focused news, liberty-first commentary, and faith-centered storytelling from more than 40 YouTube publishers in one destination.
+        </p>
+      </section>
+
+      <section class="share-strip" aria-label="Share HalHar Report Video Briefings">
+        <span class="share-heading">Share this page</span>
+        <div class="share-actions">
+          <a class="share-link" href="#" data-share="facebook" target="_blank" rel="noopener" data-label="Share to Facebook">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt="" />
+            <span class="sr-only">Share to Facebook</span>
+          </a>
+          <a class="share-link" href="#" data-share="x" target="_blank" rel="noopener" data-label="Share to X">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=x.com" alt="" />
+            <span class="sr-only">Share to X</span>
+          </a>
+          <a class="share-link" href="#" data-share="truth" target="_blank" rel="noopener" data-label="Share to Truth Social">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=truthsocial.com" alt="" />
+            <span class="sr-only">Share to Truth Social</span>
+          </a>
+          <a class="share-link" href="#" data-share="gab" target="_blank" rel="noopener" data-label="Share to Gab">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=gab.com" alt="" />
+            <span class="sr-only">Share to Gab</span>
+          </a>
+          <a class="share-link" href="#" data-share="telegram" target="_blank" rel="noopener" data-label="Share to Telegram">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=telegram.org" alt="" />
+            <span class="sr-only">Share to Telegram</span>
+          </a>
+          <a class="share-link" href="#" data-share="linkedin" target="_blank" rel="noopener" data-label="Share to LinkedIn">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=linkedin.com" alt="" />
+            <span class="sr-only">Share to LinkedIn</span>
+          </a>
+          <a class="share-link" href="#" data-share="sms" data-label="Share via SMS">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=messages.google.com" alt="" />
+            <span class="sr-only">Share via SMS</span>
+          </a>
+          <a class="share-link" href="#" data-share="email" data-label="Share via Email">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=mail.google.com" alt="" />
+            <span class="sr-only">Share via Email</span>
+          </a>
+          <button type="button" class="share-link share-link--bookmark" data-share="bookmark" data-label="Bookmark this page">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=halhar.report" alt="" />
+            <span class="share-text">Add to Bookmarks</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="page-videos" class="page" aria-labelledby="videosHeading">
+        <div class="page-header">
+          <h2 id="videosHeading">Video Briefings</h2>
+          <div class="dateline" id="videosDateline" aria-live="polite">Loading briefing time…</div>
+        </div>
+        <p class="page-description">
+          The HalHar Video Briefings collection spotlights conservative and Christian YouTube channels, delivering on-demand interviews, investigative series, and cultural commentary with instant on-site playback.
+        </p>
+        <div class="column-grid stack-rows" id="videoColumns"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand" aria-hidden="true"></div>
+      <div class="footer-copy">&copy; <span id="footerYear"></span> HalHar Report. All rights reserved.</div>
+      <nav class="footer-menu" aria-label="Footer navigation">
+        <a class="menu-pill" href="halhar-report.html">
+          <span class="material-symbols-outlined" aria-hidden="true">view_column</span>
+          Homepage
+        </a>
+        <button class="menu-pill active" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">movie</span>
+          Video Feeds
+        </button>
+        <a class="menu-pill" href="halhar-polls.html">
+          <span class="material-symbols-outlined" aria-hidden="true">bar_chart</span>
+          Polls
+        </a>
+        <a class="menu-pill" href="halhar-report.html#social">
+          <span class="material-symbols-outlined" aria-hidden="true">share</span>
+          Social Media
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="videoModal" class="video-modal" aria-hidden="true">
+    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+      <button type="button" class="video-modal__close" aria-label="Close video">&times;</button>
+      <div class="video-modal__player">
+        <iframe id="videoModalFrame" title="HalHar video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-modal__info">
+        <h3 class="video-modal__title" id="videoModalTitle"></h3>
+        <p class="video-modal__meta" id="videoModalMeta"></p>
+        <div class="video-modal__shares" id="videoModalShares"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/halhar-config.js"></script>
+  <script>
+    (() => {
+      const config = window.HalHarConfig;
+      if (!config) {
+        console.error('HalHar configuration missing');
+        return;
+      }
+
+      const FEED_GROUPS = config.feedGroups;
+      const SHARE_TARGETS = config.shareTargets;
+      const BOOKMARK_TARGET = config.bookmarkTarget;
+      const VIDEO_SHARE_TARGETS = config.videoShareTargets;
+
+      const normalizeUrl = (url) => {
+        if (!url) return url;
+        const trimmed = url.trim();
+        if (/^https?:\/\//i.test(trimmed)) {
+          return trimmed;
+        }
+        return `https://${trimmed.replace(/^\/\//, '')}`;
+      };
+
+      const FEED_ENDPOINT = '/api/fetch-feed';
+      const FEED_CACHE_MAX_AGE = 60 * 1000;
+      const feedCache = new Map();
+
+    const detectYouTubeId = (value) => {
+      if (!value) return '';
+      const patterns = [
+        /youtu\.be\/([\w-]{11})/i,
+        /youtube\.com\/watch\?[^#?]*v=([\w-]{11})/i,
+        /youtube\.com\/embed\/([\w-]{11})/i,
+        /youtube\.com\/shorts\/([\w-]{11})/i
+      ];
+      for (const pattern of patterns) {
+        const match = value.match(pattern);
+        if (match) {
+          return match[1];
+        }
+      }
+      return '';
+    };
+
+    const getCachedFeed = (url) => {
+      const key = normalizeUrl(url);
+      const entry = feedCache.get(key);
+      if (!entry) return null;
+      if (Date.now() - entry.timestamp > FEED_CACHE_MAX_AGE) {
+        feedCache.delete(key);
+        return null;
+      }
+      return entry.data;
+    };
+
+    const rememberFeed = (url, data) => {
+      feedCache.set(normalizeUrl(url), { timestamp: Date.now(), data });
+    };
+
+    const fetchFeed = async (url, options = {}) => {
+      const { bypassCache = false } = options;
+      const normalized = normalizeUrl(url);
+      if (!bypassCache) {
+        const cached = getCachedFeed(normalized);
+        if (cached) {
+          return cached;
+        }
+      }
+      const endpoint = `${FEED_ENDPOINT}?url=${encodeURIComponent(normalized)}`;
+      const response = await fetch(endpoint, {
+        headers: { Accept: 'application/json' },
+        cache: 'no-store',
+        credentials: 'same-origin'
+      });
+      if (!response.ok) {
+        throw new Error(`Feed API responded with status ${response.status}`);
+      }
+      const payload = await response.json();
+      if (!payload || typeof payload !== 'object') {
+        throw new Error('Feed API returned an unexpected payload');
+      }
+      rememberFeed(normalized, payload);
+      if (payload.error || payload.unloaded) {
+        setTimeout(() => {
+          const cached = feedCache.get(normalized);
+          if (cached && cached.data === payload) {
+            feedCache.delete(normalized);
+          }
+        }, FEED_CACHE_MAX_AGE);
+      }
+      return payload;
+    };
+
+    const clearFeedCacheEntry = (url) => {
+      const key = normalizeUrl(url);
+      if (feedCache.has(key)) {
+        feedCache.delete(key);
+      }
+    };
+
+    const sortFeedItems = (items = []) => {
+      return [...items].sort((a, b) => {
+        const extractTime = (entry) => {
+          const raw = entry?.published || entry?.updated || null;
+          if (!raw) return 0;
+          const value = new Date(raw).getTime();
+          return Number.isNaN(value) ? 0 : value;
+        };
+        return extractTime(b) - extractTime(a);
+      });
+    };
+
+    const enrichItem = (item = {}) => {
+      const clone = { ...item };
+      if (clone.published) {
+        const publishedDate = new Date(clone.published);
+        clone.published = Number.isNaN(publishedDate.getTime()) ? null : publishedDate.toISOString();
+      }
+      if (!clone.published && clone.updated) {
+        const updatedDate = new Date(clone.updated);
+        clone.published = Number.isNaN(updatedDate.getTime()) ? null : updatedDate.toISOString();
+      }
+      clone.description = clone.description || clone.summary || '';
+      clone.image = clone.image || clone.thumbnail || '';
+      clone.youtubeId = clone.youtubeId || detectYouTubeId(clone.link || '');
+      return clone;
+    };
+
+    const timeAgo = (date) => {
+      if (!(date instanceof Date) || Number.isNaN(date.getTime())) {
+        return 'Unknown';
+      }
+      const diff = Date.now() - date.getTime();
+      const minutes = Math.floor(diff / 60000);
+      if (minutes < 1) return 'Just now';
+      if (minutes < 60) return `${minutes}m ago`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}h ago`;
+      const days = Math.floor(hours / 24);
+      if (days < 7) return `${days}d ago`;
+      const weeks = Math.floor(days / 7);
+      if (weeks < 4) return `${weeks}w ago`;
+      const months = Math.floor(days / 30);
+      if (months < 12) return `${months}mo ago`;
+      const years = Math.floor(days / 365);
+      return `${years}y ago`;
+    };
+
+    const sanitizeExcerpt = (html) => {
+      const div = document.createElement('div');
+      div.innerHTML = html || '';
+      div.querySelectorAll('script, style, iframe').forEach((el) => el.remove());
+      const text = div.textContent ? div.textContent.trim() : '';
+      if (!text) return '';
+      return text.length > 280 ? `${text.slice(0, 280)}…` : text;
+    };
+
+    const buildFavicon = (feedUrl, pageUrl) => {
+      try {
+        const url = new URL(pageUrl || feedUrl);
+        return `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=64`;
+      } catch (error) {
+        return 'https://www.google.com/s2/favicons?domain=google.com&sz=64';
+      }
+    };
+
+    const createShareBar = (url, title) => {
+      if (!url) return null;
+      const share = document.createElement('div');
+      share.className = 'story-share';
+      share.setAttribute('role', 'group');
+      share.setAttribute('aria-label', 'Share this update');
+      SHARE_TARGETS.forEach((target) => {
+        const chip = document.createElement('a');
+        chip.className = 'share-chip';
+        chip.href = target.build(url, title || document.title);
+        chip.dataset.label = `Share to ${target.name}`;
+        chip.setAttribute('aria-label', `Share to ${target.name}`);
+        chip.title = `Share to ${target.name}`;
+        if (target.key === 'sms' || target.key === 'email') {
+          chip.removeAttribute('target');
+        } else {
+          chip.target = '_blank';
+        }
+        chip.rel = 'noopener';
+        const icon = document.createElement('img');
+        icon.src = `https://www.google.com/s2/favicons?sz=64&domain=${target.domain}`;
+        icon.alt = '';
+        chip.appendChild(icon);
+        const sr = document.createElement('span');
+        sr.className = 'sr-only';
+        sr.textContent = `Share to ${target.name}`;
+        chip.appendChild(sr);
+        chip.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
+        share.appendChild(chip);
+      });
+      return share;
+    };
+
+    const resolveVideoImage = (item) => {
+      if (item.image) {
+        return item.image;
+      }
+      const link = item.link || '';
+      const id = item.youtubeId || detectYouTubeId(link);
+      if (id) {
+        return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+      }
+      return '';
+    };
+    const buildVideoShareButtons = (videoUrl, title) => {
+      const safeUrl = videoUrl || window.location.href;
+      return VIDEO_SHARE_TARGETS.map((target) => {
+        const button = document.createElement('a');
+        button.className = 'video-modal__share';
+        button.href = target.build(safeUrl, title || '');
+        button.target = '_blank';
+        button.rel = 'noopener';
+        const icon = document.createElement('img');
+        icon.src = `https://www.google.com/s2/favicons?sz=64&domain=${target.domain}`;
+        icon.alt = '';
+        button.appendChild(icon);
+        button.appendChild(document.createTextNode(target.name));
+        return button;
+      });
+    };
+
+    let videoModalInitialized = false;
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      if (!modal) return;
+      const frame = document.getElementById('videoModalFrame');
+      if (frame) {
+        frame.src = '';
+      }
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+
+    function initVideoModal() {
+      if (videoModalInitialized) return;
+      const modal = document.getElementById('videoModal');
+      if (!modal) return;
+      videoModalInitialized = true;
+      const closeButton = modal.querySelector('.video-modal__close');
+      if (closeButton) {
+        closeButton.addEventListener('click', () => {
+          closeVideoModal();
+        });
+      }
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          closeVideoModal();
+        }
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeVideoModal();
+        }
+      });
+    }
+
+    function openVideoModal(item) {
+      initVideoModal();
+      const modal = document.getElementById('videoModal');
+      if (!modal) return;
+      const frame = document.getElementById('videoModalFrame');
+      const titleEl = document.getElementById('videoModalTitle');
+      const metaEl = document.getElementById('videoModalMeta');
+      const sharesEl = document.getElementById('videoModalShares');
+
+      const fallbackUrl = item.link || (item.youtubeId ? `https://www.youtube.com/watch?v=${item.youtubeId}` : '');
+      const youtubeId = item.youtubeId || detectYouTubeId(fallbackUrl);
+      if (!youtubeId) {
+        if (fallbackUrl) {
+          window.open(fallbackUrl, '_blank', 'noopener');
+        }
+        return;
+      }
+
+      if (frame) {
+        frame.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`;
+      }
+      if (titleEl) {
+        titleEl.textContent = item.title || 'Video playback';
+      }
+      if (metaEl) {
+        const metaParts = [];
+        if (item.author) {
+          metaParts.push(item.author);
+        }
+        if (item.published) {
+          const publishedDate = new Date(item.published);
+          if (!Number.isNaN(publishedDate.getTime())) {
+            metaParts.push(timeAgo(publishedDate));
+          }
+        }
+        metaEl.textContent = metaParts.join(' • ');
+      }
+      if (sharesEl) {
+        sharesEl.innerHTML = '';
+        const shareUrl = fallbackUrl || `https://www.youtube.com/watch?v=${youtubeId}`;
+        buildVideoShareButtons(shareUrl, item.title || '').forEach((button) => {
+          sharesEl.appendChild(button);
+        });
+      }
+
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+
+      const closeButton = modal.querySelector('.video-modal__close');
+      if (closeButton) {
+        closeButton.focus({ preventScroll: true });
+      }
+    }
+
+    const renderVideoItem = (item) => {
+      const card = document.createElement('article');
+      card.className = 'story-card video-item';
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', item.title ? `Play ${item.title}` : 'Play video');
+
+      const enriched = enrichItem(item);
+      const imageUrl = resolveVideoImage(enriched);
+      if (imageUrl) {
+        const figure = document.createElement('img');
+        figure.src = imageUrl;
+        figure.alt = '';
+        figure.style.borderRadius = '10px';
+        figure.style.marginBottom = '0.4rem';
+        card.appendChild(figure);
+      }
+
+      const open = (event) => {
+        if (event) {
+          event.preventDefault();
+        }
+        openVideoModal(enriched);
+      };
+
+      const headline = document.createElement('h4');
+      const link = document.createElement('a');
+      link.href = enriched.link || '#';
+      link.textContent = enriched.title || 'Untitled video';
+      link.addEventListener('click', open);
+      headline.appendChild(link);
+      card.appendChild(headline);
+
+      const meta = document.createElement('div');
+      meta.className = 'story-meta';
+      if (enriched.published) {
+        const time = document.createElement('span');
+        time.textContent = timeAgo(new Date(enriched.published));
+        meta.appendChild(time);
+      }
+      if (enriched.author) {
+        const author = document.createElement('span');
+        author.textContent = enriched.author;
+        meta.appendChild(author);
+      }
+      card.appendChild(meta);
+
+      if (enriched.description) {
+        const excerpt = document.createElement('div');
+        excerpt.className = 'story-excerpt';
+        excerpt.innerHTML = sanitizeExcerpt(enriched.description);
+        card.appendChild(excerpt);
+      }
+
+      const shareBar = createShareBar(enriched.link, enriched.title || '');
+      if (shareBar) {
+        card.appendChild(shareBar);
+      }
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('.story-share')) {
+          return;
+        }
+        open(event);
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          open();
+        }
+      });
+
+      return card;
+    };
+    const renderVideoItems = (items, output, label, favicon, meta = {}) => {
+      output.innerHTML = '';
+      const header = document.createElement('div');
+      header.className = 'story-header';
+      const fav = document.createElement('img');
+      fav.src = favicon;
+      fav.alt = '';
+      header.appendChild(fav);
+      const title = document.createElement('span');
+      title.textContent = label;
+      header.appendChild(title);
+      output.appendChild(header);
+
+      if (!items.length) {
+        const empty = document.createElement('p');
+        empty.className = 'feed-placeholder';
+        empty.textContent = 'No recent updates were returned for this feed.';
+        output.appendChild(empty);
+        return;
+      }
+
+      items.forEach((item) => {
+        output.appendChild(renderVideoItem(item));
+      });
+
+      if (meta.stale && meta.fetchedAt) {
+        const staleNote = document.createElement('p');
+        staleNote.className = 'feed-placeholder';
+        const fetchedDate = new Date(meta.fetchedAt);
+        const formatted = Number.isNaN(fetchedDate.getTime())
+          ? meta.fetchedAt
+          : fetchedDate.toLocaleString(undefined, {
+              month: 'short',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: '2-digit'
+            });
+        staleNote.textContent = `Showing cached results last updated ${formatted}.`;
+        output.appendChild(staleNote);
+      }
+    };
+
+    const handleFeedClick = async (button, output) => {
+      const list = button.parentElement;
+      list.querySelectorAll('.feed-button').forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+      output.classList.add('loading');
+      output.innerHTML = '';
+
+      const header = document.createElement('div');
+      header.className = 'story-header';
+      const fav = document.createElement('img');
+      fav.src = button.querySelector('img').src;
+      fav.alt = '';
+      header.appendChild(fav);
+      const title = document.createElement('span');
+      title.textContent = button.dataset.feedLabel;
+      header.appendChild(title);
+      output.appendChild(header);
+
+      const status = document.createElement('p');
+      status.className = 'feed-placeholder';
+      status.textContent = 'Fetching the latest updates…';
+      output.appendChild(status);
+
+      const disabledState = button.classList.contains('feed-button--error') && button.dataset.disabled === 'true';
+      if (disabledState) {
+        status.textContent = button.dataset.errorMessage || 'This feed is temporarily unavailable.';
+        status.classList.add('error-state');
+        output.classList.remove('loading');
+        return;
+      }
+
+      try {
+        const feed = await fetchFeed(button.dataset.feedUrl);
+        if (feed.unloaded) {
+          const message = feed.message || 'This feed is temporarily unavailable.';
+          button.classList.add('feed-button--error');
+          button.setAttribute('aria-disabled', 'true');
+          button.dataset.disabled = 'true';
+          button.dataset.errorMessage = message;
+          status.textContent = message;
+          status.classList.add('error-state');
+          clearFeedCacheEntry(button.dataset.feedUrl);
+          return;
+        }
+
+        if (feed.error && !feed.unloaded) {
+          const transientMessage = feed.message || 'Unable to refresh this feed right now. Please try again later.';
+          status.textContent = transientMessage;
+          status.classList.add('error-state');
+          clearFeedCacheEntry(button.dataset.feedUrl);
+          return;
+        }
+
+        button.classList.remove('feed-button--error');
+        button.removeAttribute('aria-disabled');
+        button.dataset.disabled = 'false';
+        button.dataset.errorMessage = '';
+
+        if (status.parentElement) {
+          status.remove();
+        }
+
+        const prepared = sortFeedItems(feed.items || [])
+          .map((item) => enrichItem(item))
+          .filter((item) => item && item.link)
+          .slice(0, 20);
+
+        renderVideoItems(prepared, output, button.dataset.feedLabel, fav.src, {
+          stale: Boolean(feed.stale),
+          fetchedAt: feed.fetchedAt || null
+        });
+      } catch (error) {
+        console.error('Feed load failed', error);
+        clearFeedCacheEntry(button.dataset.feedUrl);
+        status.textContent = 'Unable to refresh this feed right now. Please try again later.';
+        status.classList.add('error-state');
+      } finally {
+        output.classList.remove('loading');
+      }
+    };
+
+    const createColumn = (groupKey, groupLabel, feeds, descriptionText = '') => {
+      const column = document.createElement('div');
+      column.className = 'feed-column';
+      column.dataset.group = `videos-${groupKey}`;
+      const heading = document.createElement('h3');
+      heading.textContent = groupLabel;
+      column.appendChild(heading);
+
+      if (descriptionText) {
+        const description = document.createElement('p');
+        description.className = 'column-description';
+        description.textContent = descriptionText;
+        column.appendChild(description);
+      }
+
+      const list = document.createElement('div');
+      list.className = 'feed-list';
+      column.appendChild(list);
+
+      const output = document.createElement('div');
+      output.className = 'feed-output';
+      const placeholder = document.createElement('p');
+      placeholder.className = 'feed-placeholder';
+      placeholder.textContent = 'Select a channel to load the latest briefings.';
+      output.appendChild(placeholder);
+      column.appendChild(output);
+
+      feeds.forEach((feed) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'feed-button';
+        button.dataset.feedId = feed.id;
+        button.dataset.feedUrl = feed.url;
+        button.dataset.feedLabel = feed.name;
+        button.dataset.page = 'videos';
+        button.dataset.group = groupKey;
+        button.dataset.kind = feed.kind || 'video';
+        button.dataset.disabled = 'false';
+        button.dataset.errorMessage = '';
+        const favicon = document.createElement('img');
+        favicon.src = feed.favicon || buildFavicon(feed.url, feed.homepage || feed.url);
+        favicon.alt = '';
+        button.appendChild(favicon);
+        button.appendChild(document.createTextNode(feed.name));
+        button.addEventListener('click', () => handleFeedClick(button, output));
+        list.appendChild(button);
+      });
+
+      return column;
+    };
+    const initColumns = () => {
+      const videoColumns = document.getElementById('videoColumns');
+      if (!videoColumns) return;
+      Object.entries(FEED_GROUPS.videos).forEach(([key, group]) => {
+        videoColumns.appendChild(createColumn(key, group.label, group.feeds, group.description));
+      });
+    };
+
+    const initShareLinks = () => {
+      const shareUrl = window.location.href;
+      const shareTitle = document.title;
+      SHARE_TARGETS.forEach((target) => {
+        const link = document.querySelector(`.share-link[data-share="${target.key}"]`);
+        if (!link) return;
+        const href = target.build(shareUrl, shareTitle);
+        link.setAttribute('href', href);
+        if (target.key === 'sms' || target.key === 'email') {
+          link.removeAttribute('target');
+        } else {
+          link.setAttribute('target', '_blank');
+        }
+        link.setAttribute('rel', 'noopener');
+      });
+      const bookmark = document.querySelector('.share-link[data-share="bookmark"]');
+      if (bookmark) {
+        const bookmarkLabel = document.title || 'HalHar Video Briefings';
+        bookmark.dataset.label = `Bookmark ${bookmarkLabel}`;
+        if (BOOKMARK_TARGET && BOOKMARK_TARGET.domain) {
+          bookmark.dataset.domain = BOOKMARK_TARGET.domain;
+        }
+        bookmark.addEventListener('click', (event) => {
+          event.preventDefault();
+          const isApple = /Mac|iPhone|iPad|iPod/.test(navigator.platform);
+          const message = isApple
+            ? `Press ⌘ + D to add ${bookmarkLabel} to your bookmarks.`
+            : `Press Ctrl + D to add ${bookmarkLabel} to your bookmarks.`;
+          window.alert(message);
+        });
+      }
+    };
+
+    const initFooterYear = () => {
+      const yearEl = document.getElementById('footerYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    };
+
+    const setDateline = () => {
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit'
+      });
+      const now = formatter.format(new Date());
+      const dateline = document.getElementById('videosDateline');
+      if (dateline) {
+        dateline.textContent = now;
+      }
+    };
+
+    const initDateline = () => {
+      setDateline();
+      setInterval(setDateline, 60 * 1000);
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initColumns();
+      initShareLinks();
+      initFooterYear();
+      initVideoModal();
+      initDateline();
+    });
+  })();
+  </script>
+</body>
+</html>
