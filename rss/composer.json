@@ -1,0 +1,16 @@
+{
+    "name": "example/rss-importer",
+    "description": "Self-hosted RSS/Atom importer and publisher for cPanel environments",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "simplepie/simplepie": "^1.5",
+        "guzzlehttp/guzzle": "^7.8",
+        "ezyang/htmlpurifier": "^4.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "RSS\\": "app/lib/"
+        }
+    }
+}

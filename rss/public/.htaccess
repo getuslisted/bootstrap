@@ -1,0 +1,6 @@
+Options -Indexes
+AddType application/json .json
+AddType application/rss+xml .rss
+AddType application/atom+xml .atom
+AddType text/x-opml .opml
+Header set X-Content-Type-Options "nosniff"
