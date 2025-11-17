@@ -1,0 +1,9 @@
+AuthType Basic
+AuthName "RSS Admin"
+AuthUserFile /home/USERNAME/rss/admin/.htpasswd
+Require valid-user
+Require ip 127.0.0.1 ::1
+<IfModule mod_php.c>
+    php_flag session.use_only_cookies On
+    php_value session.cookie_httponly 1
+</IfModule>
